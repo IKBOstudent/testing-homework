@@ -1,15 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import { render } from '@testing-library/react';
+import { render } from "@testing-library/react";
 
-describe('Simple Test Case', () => {
-    it('Should return 4', () => {
-        const app = <div>example</div>;
-
+describe("Simple Test Case", () => {
+    it("Should return 4", () => {
+        const app = React.createElement("div", { children: "text" });
         const { container } = render(app);
-
-        console.log(container.outerHTML);
-
-        expect(container.textContent).toBe('example');
+        expect(container.textContent).toBe("text");
     });
 });
