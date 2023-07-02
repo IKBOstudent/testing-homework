@@ -1,16 +1,16 @@
-import React from 'react';
-import { render } from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
-import { Provider } from 'react-redux';
+import React from "react";
+import { render } from "react-dom";
+import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
 
-import { Application } from './Application';
-import { ExampleApi, CartApi } from './api';
-import { initStore } from './store';
+import { Application } from "./Application";
+import { ExampleApi, CartApi } from "./api";
+import { initStore } from "./store";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './index.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
 
-const basename = '/hw/store';
+const basename = "/hw/store";
 
 const api = new ExampleApi(basename);
 const cart = new CartApi();
@@ -24,4 +24,4 @@ const application = (
     </BrowserRouter>
 );
 
-render(application, document.getElementById('root'));
+render(application, document.getElementById("root"));
